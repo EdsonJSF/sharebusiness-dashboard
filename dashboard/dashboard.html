@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../assets/libs/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="../assets/libs/bootstrap5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./dashboard.css" />
+</head>
+<body>
+  <main role="main" class="container-fluid">
+    <div class="row">
+      <!-- Header -->
+      <div class="container-fluid col-12 bg-dark text-white p-4">
+        <div class="row">
+
+          <div class="col-12 col-sm-6 col-md-5 col-lg-4">
+            <h2>Ajustes de impresora</h2>
+            <strong>Nombre de impresora seleccionada: </strong>
+            <p id="impresoraSeleccionada"></p>
+            <div class="form-group my-2">
+              <select class="form-control" id="listaDeImpresoras"></select>
+            </div>
+            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="my-2 me-1">
+                <button class="btn btn-primary btn-sm" id="btnRefrescarLista">
+                  <i class="fa fa-refresh"></i>
+                  Refresh
+                </button>
+                <button class="btn btn-primary btn-sm" id="btnEstablecerImpresora">
+                  <i class="fa fa-check"></i>
+                  Seleccionar
+                </button>
+              </div>
+              <div class="my-2">
+                <button class="btn btn-success btn-sm" id="btnImprimir">
+                  <i class="fa fa-print"></i>
+                  Imprimir
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-7 col-lg-8">
+              <h2>Log</h2>
+              <button class="btn btn-warning btn-sm" id="btnLimpiarLog">
+                <i class="fa fa-trash"></i>
+                Limpiar log
+              </button>
+              <pre id="estado"></pre>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="col bg-secondary text-white p-4">
+        <div class="table-responsive">
+          <table class="table table-light table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">concurso</th>
+                <th scope="col">nombres</th>
+                <th scope="col">apellidos</th>
+                <th scope="col">correo</th>
+                <th scope="col">direccion</th>
+                <th scope="col">telefono</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">fecha</th>
+                <th scope="col">total</th>
+                <th scope="col">status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>Jhon</td>
+                <td>Doe</td>
+                <td>mail@mail.com</td>
+                <td>calle #</td>
+                <td>+00000000</td>
+                <td>1</td>
+                <td>28/03/2022</td>
+                <td>0$</td>
+                <td>Pagado</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/libs/bootstrap5/js/bootstrap.min.js"></script>
+  <script src="../assets/libs/impresora/Impresora.js"></script>
+  <script src="./dashboard.js"></script>
+</body>
+</html>
